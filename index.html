@@ -1,0 +1,193 @@
+<head>
+    <title>Brainrot Quiz</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=New+Amsterdam&display=swap');
+
+
+
+h1{
+    font-family: "Anton SC", sans-serif;
+    text-align: center;
+    font-size: 4vw;
+}
+body{
+    background: rgb(25, 18, 7);
+  background-image: radial-gradient(rgb(48, 22, 22) 15px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+h5{
+    font-size: 1vw;
+    font-family: "Jost", sans-serif;
+}
+h2 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 2vw;
+}
+h3{
+    font-family: "New Amsterdam", sans-serif;
+    opacity: 0.5;
+    text-align: center;
+}
+.skibidi{
+    text-align: center;
+    background-color: rgb(255, 255, 160);
+    width: 45vw;
+    height: 50vh;
+    right: 50%;
+    border-radius: 2rem;
+    
+}
+h4, li{
+    font-size: 1vw;
+    font-family: "Jost", sans-serif;
+
+}
+button{
+    font-family: "Jost", sans-serif;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+    
+}
+button {
+    cursor: pointer; 
+}
+button:hover {
+    background-color: grey;
+}
+#yellow{
+    background-color: rgb(255, 255, 160);
+    background-size: 23px 40px;
+    border-radius: 1vw 1vw 0px 0px;
+    background-repeat: repeat-y;
+    padding-bottom: 1rem;
+    background-image: linear-gradient(320deg,  rgb(25, 18, 7) 15px, transparent 18px), linear-gradient(40deg,  rgb(25, 18, 7) 16px, transparent 18px);
+    background-repeat: repeat-x;
+    background-position: right bottom;
+    left: 50%;
+}
+
+
+#wrapper{
+    flex: 1; 
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+}
+</style>
+
+<audio autoplay loop>
+    <source src="bbg.ogg" type="audio/ogg">
+
+</audio>
+
+<div id = "yellow">
+    <br>
+    <h1>FNF YELLOW BRAINROT QUIZ 👅👅👅👅</h1>
+    <h3>do you have it inside you?</h3>
+</div>
+    <br>
+    <br>
+    <div id = "wrapper">
+
+
+        <div class = "skibidi" id = "chungus">
+
+            <br>
+            <h5 id="pingas">Question 1 / 10</h5>
+            <h2 id = "rizzler">Answer The Question</h2>
+            <h4 id = "sigmoid">The Mission</h4>
+
+            <div id ="pluh">
+                <input id = "fim" type="text" id="name" name="name" required minlength="4" maxlength="50" size="10" />
+                <button  type="button" onclick="bort()">Sumbit Response</button>
+            </div>
+
+
+        </div>
+        <div class = "skibidi">
+<ul id = 'CHUD'>
+   
+</ul>
+
+        </div>
+    </div>
+
+    <script>
+            let questionNum = 0;
+            const topic = ["The Mission _", "What is Chapter 5", "What is Byza's True Title?","What AI did byza Kill?", "What does bbgStarlo's Thumbnail say", "What do we say to Frostex?", "Who Stinks it up?","Babycorn?", "What is Jupo's slash?" , "Who Cheated on FIM?"  ]
+            let answers = [["INSIDE YOU", "INSIDE YOU!", "INSIDE YOU!!"], ["ICE PALACE"], ["ELDER SIGMA"], ["WING GASTER","WINGY", "WING GASTER AI","WINGY AI", "AI WING GASTER","AI WINGY"  ], ["THE WEST IS GOING NOWHERE", "THE WESTS GOING NOWHERE", "THE WEST'S GOING NOWHERE"], ["THE MISSION INSIDE YOU","THE MISSION INSIDE YOU!"], ["FARTYRUS"],["STARLOS HOME","STARLO'S HOME","STARLOS HOME, HELLO PRINCESS","STARLO'S HOME, HELLO PRINCESS" ], ["PAINT", "SPRAYPAINT"] ,["WING GASTER", "WINGY", "WINGY GYATTSTER"
+            
+            
+        
+] ];
+
+
+        let numRight = 0;
+
+
+        function fart(){
+
+
+
+            document.getElementById("sigmoid").innerHTML = topic[questionNum];
+            document.getElementById("fim").value = "";
+            document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / 10`;
+        }
+
+        function bort(){
+
+            let a = answers[questionNum].includes(document.getElementById("fim").value.toUpperCase());
+            document.getElementById("CHUD").innerHTML += `<li>${(a)? "✔":"❌"} ${document.getElementById("fim").value}</li>`;
+            if (a){
+                numRight ++;
+            }
+            
+            if (questionNum == 9){
+                // do the ending Screen;
+                document.getElementById("chungus").innerHTML= `<h2>FINAL SCORE: ${numRight * 10}%</h2><h5>Return if you want some more ;)</h5>`;
+
+
+                let thing = "";
+
+                switch(numRight) {
+                case 10:
+                    thing = "<h4>Perfect! Perfect ! Perfect ! You truly have some [[AMBITION]] [[INSIDE YOU]]</h4><img src='gassy.gif' width='150vw' />";
+                    break;
+                case 9:
+                    thing = "<h4>So Close! [[JUST REMEMBER WHAT YOUR OLD PAL SAID]] and keep going till 100%</h4><img src='babycorn.png' width='150vw' />";
+                    break;
+                case 8:
+                    thing = "<h4>Impress Work! Continue on your [[MISSION]] for 100%</h4><img src='bbg.gif' width='150vw' />";
+                    break;
+                case 7:
+                    thing = "<h4>Getting there [[FRIEND]]! Let more of thre rot consume you.</h4><img src='bbg.gif' width='150vw' />";
+                    break;
+                case 6:
+                    thing = "<h4>You need much more [[GUIDE]]ance to reach ur potiental [[OLD PAL]] have a wingy to motivate you.</h4><img src='wingy.png' width='150vw' />";
+                    break;
+                default:
+                    thing = "<h4>Only elder sigmas get this score. Study this image and come back.</h4><img src='horrid.png' width='200vw' />";
+                    break;
+
+                }
+                document.getElementById("chungus").innerHTML += thing;
+                return;
+            }
+            questionNum++;
+            fart();
+        }
+
+        fart();
+
+
+
+    </script>
+
+
+</head>
