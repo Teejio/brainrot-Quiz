@@ -30,7 +30,7 @@ function musicPlay() {
      //     window.alert( _.shuffle(questions.problems));
                 
      //     window.alert( _.shuffle(questions.problems));
-        questions.problems.sort( () => Math.random() - 0.5) );
+        questions.problems.sort( () => Math.random() - 0.5) ;
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
             document.getElementById("fim").value = "";
             document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / ${questions.problems.length}`;
