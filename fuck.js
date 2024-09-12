@@ -27,7 +27,7 @@ function musicPlay() {
         function fart(){
 
 
-          question.problems = _.shuffle(questions.problems);
+          //question.problems = _.shuffle(questions.problems);
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
             document.getElementById("fim").value = "";
             document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / ${questions.problems.length}`;
