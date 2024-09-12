@@ -36,7 +36,7 @@ function shuffle(array) {
 }
 shuffle(please);
         function fart(){
-questionNum = please[qsec];
+questionNum = please[qSeq];
 
      //     window.alert( _.shuffle(questions.problems));
                 
