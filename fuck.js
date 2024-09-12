@@ -27,7 +27,7 @@ function musicPlay() {
         function fart(){
 
 
-            questions.problems.map(value => ({ value, sort: Math.random() }))
+           questions.problems =  questions.problems.map(value => ({ value, sort: Math.random() }))
             .sort((a, b) => a.sort - b.sort)
             .map(({ value }) => value);
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
