@@ -8,29 +8,40 @@ function musicPlay() {
     document.getElementById('bbg').play();
     document.removeEventListener('click', musicPlay);
 }
-            let questionNum = 0;
-            const topic = ["The Mission _", "What is Chapter 5", "What is Byza's True Title?","What AI did byza Kill?", "What does bbgStarlo's Thumbnail say", "What do we say to Frostex?", "Who Stinks it up?","Babycorn?", "What is Jupo's slash?" , "Who Cheated on FIM?"  ]
-           // i see you alice stop looking
-        let answers = [["INSIDE YOU", "INSIDE YOU!", "INSIDE YOU!!"], ["ICE PALACE"], ["ELDER SIGMA"], ["WING GASTER","WINGY","WINGY BOT", "WING GASTER AI","WINGY AI", "AI WING GASTER","AI WINGY"  ], ["THE WEST IS GOING NOWHERE", "THE WESTS GOING NOWHERE", "THE WEST'S GOING NOWHERE"], ["THE MISSION INSIDE YOU","THE MISSION INSIDE YOU!"], ["FARTYRUS"],["STARLOS HOME","STARLO'S HOME","STARLOS HOME, HELLO PRINCESS","STARLO'S HOME, HELLO PRINCESS" ], ["PAINT", "SPRAYPAINT"] ,["WING GASTER", "WINGY", "WINGY GYATTSTER"
-            
-            
-        
-] ];
+let qSeq = 0;
 
+let please = [...Array(questions.problems.length).keys()];
+            let questionNum = 0;
+            
 
 
 
 
         let numRight = 0;
 
+function shuffle(array) {
+  let currentIndex = array.length;
 
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
+shuffle(please);
         function fart(){
-
+questionNum = please[qsec];
 
      //     window.alert( _.shuffle(questions.problems));
                 
      //     window.alert( _.shuffle(questions.problems));
-        questions.problems.sort( () => Math.random() - 0.5) ;
+        
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
             document.getElementById("fim").value = "";
             document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / ${questions.problems.length}`;
@@ -45,7 +56,7 @@ function musicPlay() {
                 numRight ++;
             }
             
-            if (questionNum == questions.problems.length -1){
+            if (qSeq == questions.problems.length -1){
                 // do the ending Screen;
        //         document.getElementById("chungus").innerHTML= `<h2>FINAL SCORE: ${Math.floor((numRight/ questions.problems.length) * 100)}%</h2><h5>Return if you want some more ;)</h5>`;
 
@@ -76,7 +87,7 @@ function musicPlay() {
                 document.getElementById("chungus").innerHTML += thing;
                 return;
             }
-            questionNum++;
+            qSeq+;
             fart();
         }
 
