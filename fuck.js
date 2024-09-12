@@ -87,7 +87,7 @@ questionNum = please[qSeq];
                 document.getElementById("chungus").innerHTML += thing;
                 return;
             }
-            qSeq+;
+            qSeq++;
             fart();
         }
 
