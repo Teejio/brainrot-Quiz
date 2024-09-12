@@ -44,7 +44,7 @@ questionNum = please[qSeq];
         
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
             document.getElementById("fim").value = "";
-            document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / ${questions.problems.length}`;
+            document.getElementById("pingas").innerHTML = `Question ${(qSeq + 1).toString()} / ${questions.problems.length}`;
         }
 
         var bort= function(){
