@@ -40,7 +40,7 @@ h3{
     text-align: center;
     background-color: rgb(255, 255, 160);
     width: 45vw;
-    height: 50vh;
+    min-height: 50vh;
     right: 50%;
     border-radius: 2rem;
     
@@ -76,6 +76,16 @@ button:hover {
     left: 50%;
 }
 
+#CHUD {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#CHUD > li{
+
+    margin: 20px ;
+
+}
 
 #wrapper{
     flex: 1; 
@@ -109,7 +119,7 @@ button:hover {
 
             <div id ="pluh">
                 <input id = "fim" type="text" id="name" name="name" required minlength="4" maxlength="50" size="10" />
-                <button  type="button" onclick="bort()">Sumbit Response</button>
+                <button  type="button" onclick="bort()">Submit Response</button>
             </div>
 
 
@@ -122,83 +132,21 @@ button:hover {
         </div>
     </div>
 
-    <script>
-            document.getElementById('bbg').play();
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('bbg').play();
-    document.removeEventListener('click', musicPlay);
-}
-            let questionNum = 0;
-            const topic = ["The Mission _", "What is Chapter 5", "What is Byza's True Title?","What AI did byza Kill?", "What does bbgStarlo's Thumbnail say", "What do we say to Frostex?", "Who Stinks it up?","Babycorn?", "What is Jupo's slash?" , "Who Cheated on FIM?"  ]
-           // i see you alice stop looking
-        let answers = [["INSIDE YOU", "INSIDE YOU!", "INSIDE YOU!!"], ["ICE PALACE"], ["ELDER SIGMA"], ["WING GASTER","WINGY","WINGY BOT", "WING GASTER AI","WINGY AI", "AI WING GASTER","AI WINGY"  ], ["THE WEST IS GOING NOWHERE", "THE WESTS GOING NOWHERE", "THE WEST'S GOING NOWHERE"], ["THE MISSION INSIDE YOU","THE MISSION INSIDE YOU!"], ["FARTYRUS"],["STARLOS HOME","STARLO'S HOME","STARLOS HOME, HELLO PRINCESS","STARLO'S HOME, HELLO PRINCESS" ], ["PAINT", "SPRAYPAINT"] ,["WING GASTER", "WINGY", "WINGY GYATTSTER"
-            
-            
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js"></script>
+    <script type = "module">
+
         
-] ];
+let q = await fetch("./question.json");
+        
+        let qText = await q.text();
+        window.questions = JSON.parse(qText);
 
-
-        let numRight = 0;
-
-
-        function fart(){
-
-
-
-            document.getElementById("sigmoid").innerHTML = topic[questionNum];
-            document.getElementById("fim").value = "";
-            document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / 10`;
-        }
-
-        function bort(){
-
-            let a = answers[questionNum].includes(document.getElementById("fim").value.toUpperCase());
-            document.getElementById("CHUD").innerHTML += `<li>${(a)? "✔":"❌"} ${document.getElementById("fim").value}</li>`;
-            if (a){
-                numRight ++;
-            }
-            
-            if (questionNum == 9){
-                // do the ending Screen;
-                document.getElementById("chungus").innerHTML= `<h2>FINAL SCORE: ${numRight * 10}%</h2><h5>Return if you want some more ;)</h5>`;
-
-
-                let thing = "";
-
-                switch(numRight) {
-                case 10:
-                    thing = "<h4>Perfect! Perfect ! Perfect ! You truly have some [[AMBITION]] [[INSIDE YOU]]</h4><img src='gassy.gif' width='150vw' />";
-                    break;
-                case 9:
-                    thing = "<h4>So Close! [[JUST REMEMBER WHAT YOUR OLD PAL SAID]] and keep going till 100%</h4><img src='babycorn.png' width='150vw' />";
-                    break;
-                case 8:
-                    thing = "<h4>Impress Work! Continue on your [[MISSION]] for 100%</h4><img src='bbg.gif' width='150vw' />";
-                    break;
-                case 7:
-                    thing = "<h4>Getting there [[FRIEND]]! Let more of thre rot consume you.</h4><img src='bbg.gif' width='150vw' />";
-                    break;
-                case 6:
-                    thing = "<h4>You need much more [[GUIDE]]ance to reach ur potiental [[OLD PAL]] have a wingy to motivate you.</h4><img src='wingy.png' width='150vw' />";
-                    break;
-                default:
-                    thing = "<h4>Only elder sigmas get this score. Study this image and come back.</h4><img src='horrid.png' width='200vw' />";
-                    break;
-
-                }
-                document.getElementById("chungus").innerHTML += thing;
-                return;
-            }
-            questionNum++;
-            fart();
-        }
-
-        fart();
-
-
-
+        var scriptElm = document.createElement('script');
+scriptElm.src = 'fuck.js';
+document.body.appendChild(scriptElm);
     </script>
+
+
 
 
 </head>
