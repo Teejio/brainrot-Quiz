@@ -23,13 +23,25 @@ function musicPlay() {
 
         let numRight = 0;
 
+function shuffle(array) {
+  let currentIndex = array.length;
 
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
         function fart(){
 
 
-           questions.problems =  questions.problems.map(value => ({ value, sort: Math.random() }))
-            .sort((a, b) => a.sort - b.sort)
-            .map(({ value }) => value);
+           shuffle(questions.problems);
             document.getElementById("sigmoid").innerHTML = questions.problems[questionNum].q;
             document.getElementById("fim").value = "";
             document.getElementById("pingas").innerHTML = `Question ${(questionNum + 1).toString()} / ${questions.problems.length}`;
