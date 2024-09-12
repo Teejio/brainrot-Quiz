@@ -58,7 +58,7 @@ questionNum = please[qSeq];
             
             if (qSeq == questions.problems.length -1){
                 // do the ending Screen;
-       //         document.getElementById("chungus").innerHTML= `<h2>FINAL SCORE: ${Math.floor((numRight/ questions.problems.length) * 100)}%</h2><h5>Return if you want some more ;)</h5>`;
+                document.getElementById("chungus").innerHTML= `<h2>FINAL SCORE: ${Math.floor((numRight/ questions.problems.length) * 100)}%</h2><h5>Return if you want some more ;)</h5>`;
 
 
                 let thing = "";
